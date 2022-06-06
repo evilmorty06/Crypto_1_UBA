@@ -1,0 +1,11 @@
+Authlib==0.15.5
+cffi==1.15.0
+click==8.0.3
+cryptography==36.0.1
+Flask==2.0.2
+itsdangerous==2.0.1
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+pycparser==2.21
+pycryptodome==3.14.1
+Werkzeug==2.0.3

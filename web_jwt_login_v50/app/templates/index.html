@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <title>JWT Login v5.0</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>JWT Login v5.0</h1>
+
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+
+            {% if message %}
+            <div class="alert alert-primary" role="alert">
+                {{ message }}
+            </div>
+            {% endif %}
+
+            {% if flag %}
+            <div class="alert alert-success" role="alert">
+                {{ flag }}
+            </div>
+            {% endif %}
+
+            <form method="post" action="{{ url_for('login') }}">
+                <div class="mb-3">
+                    <label for="txtUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="txtUsername" placeholder="Username" name="username">
+                </div>
+                
+                <button type="submit" class="btn btn-lg btn-primary">Login</button>
+            </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
+    </body>
+</html>

@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  webapp:
+    image: jwt-login-v5:0.1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - FLAG=FLAG{2cab0d29194955a834b61728fe1cf6dccba9b2e8ecb32bee758f8f710913055a}
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8000:80"
